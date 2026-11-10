@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Antrean Online - Klinik Ratu Farma Aceh</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Navbar Header -->
+    <header class="bg-white shadow-sm border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/img/logo-ratu-farma.jpeg" alt="Logo Ratu Farma" class="h-20 w-auto object-contain">
+            </div>
+
+            <!-- Menu Navigasi Kanan -->
+            <nav class="flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="hover:text-cyan-700 transition">Beranda / Poli</a>
+                
+
+                <!-- DROPDOWN PORTAL PETUGAS & DOKTER -->
+                <div class="relative" id="dropdown-container">
+                    <button id="dropdown-btn" type="button" class="flex items-center space-x-1 hover:text-cyan-700 transition focus:outline-none cursor-pointer">
+                        <span>Portal Petugas</span>
+                        <svg class="w-4 h-4 transition-transform duration-200" id="dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Isi Dropdown -->
+                    <div id="dropdown-menu" class="hidden absolute right-0 mt-3 w-48 bg-white border border-slate-100 rounded-2xl shadow-xl py-2 z-50">
+                        <a href="petugas/login.php" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-cyan-700 transition">
+                            🔐 Login Petugas
+                        </a>
+                        <div class="border-t border-slate-100 my-1"></div>
+                        <a href="dokter/login_dokter.php" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-cyan-700 hover:text-white transition">
+                            🩺 Login Dokter
+                        </a>
+                    </div>
+                </div>
+
+                
+<a href="petugas/display_tv.php" class="bg-[#0d5975] text-white px-5 py-2.5 rounded-xl text-xs font-bold shadow-sm inline-block">
+    Sistem Antrean
+</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Header Section -->
+    <section class="bg-gradient-to-r from-sky-50 via-teal-50 to-emerald-50 py-16 px-4 sm:px-6 lg:px-8 border-b">
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight">
+                Sistem Antrean Online
+            </h1>
+            <p class="text-lg text-gray-600 font-medium">
+                Klinik Ratu Farma Aceh &bull; Pilih poli untuk melihat jadwal dokter
+            </p>
+            <p class="text-sm text-gray-500 max-w-2xl mx-auto">
+                Selamat Datang di Klinik Ratu Farma Aceh. Silakan pilih salah satu layanan poli di bawah ini untuk melihat jadwal dokter atau daftar antrean secara online.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="pt-4 flex justify-center gap-4">
+                <a href="pasien/login.php" class="bg-sky-800 hover:bg-sky-900 text-white font-medium px-6 py-2.5 rounded-lg shadow-sm transition">
+                    Daftar Antrean
+                </a>
+                <a href="pasien/pendaftaran.php" class="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 font-medium px-6 py-2.5 rounded-lg shadow-sm transition">
+                    Pasien Baru
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content: List Poli -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-1">
+        <div class="mb-6">
+            <h2 class="text-xl font-bold text-gray-900">11 Poli Pelayanan</h2>
+            <p class="text-xs text-gray-500">Daftar lengkap poli beserta tenaga medis yang bertugas.</p>
+        </div>
+
+        <!-- Grid Poli (11 Poli) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            
+            <!-- 1. Poli Anak (A) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli Anak</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE A</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">dr. Tita Menawati, M.Kes, Sp.A</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin - Sabtu (15:00 - 20:00 WIB)</p>
+                </div>
+            </div>
+
+            <!-- 2. Poli Saraf (B) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli Saraf</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE B</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">Prof. Dr. dr. Endang Mutiawati, Sp.S(K)</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin - Sabtu (16:00 - 20:00 WIB)</p>
+                </div>
+            </div>
+
+            <!-- 3. Poli Penyakit Dalam (C) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli Penyakit Dalam</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE C</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">dr. Zurriyani, Sp.PD</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin - Jumat (19:30 - 21:00 WIB)</p>
+                </div>
+            </div>
+
+            <!-- 4. Poli Urologi (D) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli Urologi</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE D</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">dr. Muhammad Ridha, Sp.U (K)</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin - Jumat (19:30 - 20:30 WIB) - Oncall</p>
+                </div>
+            </div>
+
+            <!-- 5. Poli Gigi (E) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli Gigi</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE E</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">Dr. drg. Diana Setya Ningsih, M.Si</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin - Sabtu (17:00 - 21:00 WIB)</p>
+                </div>
+            </div>
+
+            <!-- 6. Poli Akupunktur (F) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli Akupunktur</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE F</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">dr. Putri Ade Meuratana, Sp.Ak</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin & Kamis (17:00 - 20:00 WIB)</p>
+                </div>
+            </div>
+
+            <!-- 7. Poli Psikiater (G) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli psikiater</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE G</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">dr. Marlinda, Sp. KJ</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin - Jumat (15:00 - 18:00 WIB) - Oncall</p>
+                </div>
+            </div>
+
+            <!-- 8. Poli Kandungan (H) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli Kandungan</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE H</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">dr. Roziana, M.ked, Sp.Og(K) - Urogin RE</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin - Jumat (17:00 - 19:30 WIB)</p>
+                </div>
+            </div>
+
+            <!-- 9. Poli THT (I) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli THT</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE I</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">dr. Iskandar Zulkarnain, Sp. THT-KL</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin - Jumat (19:30 - 21:00 WIB)</p>
+                </div>
+            </div>
+
+            <!-- 10. Poli Paru-Paru (J) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli Paru-Paru</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE J</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">dr. Nurfitriani, Sp. P</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin - Jumat (17:00 - 20:00 WIB) - Oncall</p>
+                </div>
+            </div>
+
+            <!-- 11. Poli Perawat Psikolog Anak Remaja (K) -->
+            <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+                <h3 class="text-sm font-bold text-gray-900">Poli perawat psikolog anak &amp; remaja</h3>
+                <span class="inline-block mt-1 text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded border border-blue-100">KODE K</span>
+                <div class="mt-3 text-xs text-gray-600 space-y-1">
+                    <p class="font-medium text-gray-800">Anita Sapitri, AMK. S.Psi. CH. Cht</p>
+                    <p class="text-gray-500 flex items-center gap-1">📅 Senin - Jumat (17:00 - 20:00 WIB) - Oncall</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-6 text-center text-xs text-gray-500 mt-10">
+        &copy; 2026 Klinik Ratu Farma Aceh. All rights reserved.
+    </footer>
+
+    <!-- Script JavaScript untuk Dropdown Portal Petugas -->
+    <script>
+        const dropdownBtn = document.getElementById('dropdown-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const dropdownIcon = document.getElementById('dropdown-icon');
+
+        dropdownBtn.addEventListener('click', function(event) {
+            event.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+            dropdownIcon.classList.toggle('rotate-180');
+        });
+
+        dropdownMenu.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+
+        window.addEventListener('click', function() {
+            if (!dropdownMenu.classList.contains('hidden')) {
+                dropdownMenu.classList.add('hidden');
+                dropdownIcon.classList.remove('rotate-180');
+            }
+        });
+    </script>
+
+</body>
+</html>

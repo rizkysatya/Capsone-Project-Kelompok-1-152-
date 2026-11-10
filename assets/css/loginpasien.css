@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #e6fcf5 0%, #f0fdf4 100%);
+    color: #111827;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.75rem 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo img {
+    height: 45px;
+    object-fit: contain;
+}
+
+#fallback-brand {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #0b4f6c;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #374151;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #0b4f6c;
+}
+
+/* Tombol Sistem Antrean di Nav */
+.btn-system {
+    background-color: #0b4f6c;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-system:hover {
+    background-color: #083d53;
+}
+
+/* MAIN CONTENT / WRAPPER */
+.login-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 440px;
+    border: 1px solid #d1fae5;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-header h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #111827;
+}
+
+.login-header p {
+    color: #4b5563;
+    font-size: 0.9rem;
+}
+
+/* FORM STYLING */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #0b4f6c;
+    box-shadow: 0 0 0 3px rgba(11, 79, 108, 0.15);
+}
+
+/* Tombol Intip Password */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #6b7280;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password:hover {
+    color: #0b4f6c;
+}
+
+.login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0b4f6c;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+.login-button:hover {
+    background-color: #083d53;
+}
+
+/* FOOTER CARD */
+.login-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 1.25rem;
+}
+
+.login-footer p {
+    margin-bottom: 0.3rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.login-footer a {
+    color: #0b4f6c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN FOOTER */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.footer span {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.75rem;
+    color: #9ca3af;
+}

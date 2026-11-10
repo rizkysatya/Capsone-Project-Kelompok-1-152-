@@ -1,0 +1,14 @@
+/* assets/css/dashboard-petugas.css */
+body {
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.brand-gradient {
+    background: linear-gradient(135deg, #0b4f6c 0%, #01baef 100%);
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}

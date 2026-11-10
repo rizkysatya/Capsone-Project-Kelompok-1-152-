@@ -1,0 +1,192 @@
+/* assets/css/login-dokter.css */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 440px;
+    padding: 40px;
+    border-radius: 28px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.logo-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.clinic-logo {
+    height: 55px;
+    width: 55px;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #0891b2;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.heading {
+    margin-bottom: 24px;
+}
+
+.portal-label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    color: #475569;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.heading h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: -0.025em;
+    margin-bottom: 4px;
+}
+
+.heading p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
+    background-color: #f8fafc;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #0891b2;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(8, 145, 178, 0.1);
+}
+
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-field input {
+    padding-right: 70px;
+}
+
+#toggle-password {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 11px;
+    font-weight: 700;
+    color: #0891b2;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.login-button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px;
+    background: linear-gradient(135deg, #0891b2 0%, #1d4ed8 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(8, 145, 178, 0.25);
+    transition: opacity 0.2s ease;
+}
+
+.login-button:hover {
+    opacity: 0.92;
+}
+
+.security-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding: 12px 16px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.security-icon {
+    color: #0891b2;
+    font-size: 14px;
+}
+
+.security-note p {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 11px;
+    color: #94a3b8;
+    line-height: 1.5;
+}
